@@ -37,8 +37,9 @@ AutoML allowed me to run multiple experiments and chose the best model.
 A total of 30 models were executed.  The best model happened to be the VotingEnsemble and had a slightly better accuracy of 91.77%.  This is a majority voting ensemble which combines the predictions from multiple models.  This wil give a better performing model than using a single model that was used in the ensemble.
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+It is clear that AutoML delivered a model with better accuracy using a Votin Ensemble.  The Voting Ensemble delivered an accuracy 0f 91.77% compared to using logistic regression and HyperDrive which delivered an accuracy of 90.89%.
 
+The bigest difference is that AutoML automates the execution of multiple models.  If I want to do the same using HyperDrive, I would need to manually set up a pipeline for each model.
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
