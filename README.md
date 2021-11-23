@@ -11,7 +11,7 @@ The dataset contains information on potential target customers collected from ma
 The best performing model was found to be the AutoML model with a the best performing pipeline being a VotingEnsemble and an accuracy of 91.77%, the accuracy of the logistic regression model implemented using Hyperdrive was slightly lower with an accuracy of 90.89%.
 
 ## Scikit-learn Pipeline
-Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.
+**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
 I accessed the data from the following URL: https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv using the TabularDatasetFactory which creates a tabular dataset.
 
