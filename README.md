@@ -8,10 +8,22 @@ This model is then compared to an Azure AutoML run.
 ## Summary
 The dataset contains information on potential target customers collected from market research done for a bank.  The predicted result wil be done on the deposit column, whether a customer would make a deposit or not.
 
-The best performing model was found to be the AutoML model and the model type was ?? with ?? accuracy, the accuracy of the logistic regression model implemented using Hyperdrive was slightly lower with an accuracy of ??.
+The best performing model was found to be the AutoML model with a the best performing pipeline being a VotingEnsemble and an accuracy of 91.77%, the accuracy of the logistic regression model implemented using Hyperdrive was slightly lower with an accuracy of 90.89%.
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.
+
+I accessed the data from the following URL: https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv using the TabularDatasetFactory which creates a tabular dataset.
+
+The data imported is then cleaned using a clean_data function.
+
+The cleaned data is then split into a training and test set with a 80:20 split ratio.
+
+A Scikit-learn logistic regression model is used.  A parameter sampler is set up.  Two hyperparameters are tuned (C and max_iter).  C is called a inverse regularisation parameter and max_iter is the number of iterations.
+
+A SKLearn estimator and parameter sampler is created to configure the HyperDrive.
+
+The experiments are submitted and the accuracy is created for all of the runs and the best model is saved.
 
 **What are the benefits of the parameter sampler you chose?**
 
