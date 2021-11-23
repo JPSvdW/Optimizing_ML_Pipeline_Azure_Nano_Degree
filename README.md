@@ -41,7 +41,18 @@ It is clear that AutoML delivered a model with better accuracy using a Votin Ens
 
 The bigest difference is that AutoML automates the execution of multiple models.  If I want to do the same using HyperDrive, I would need to manually set up a pipeline for each model.
 ## Future work
-Future work can include making sure that the data is balanced to ensure that predictions are now skewed.  Further investigation can be made on the data to ensure that there are no bias towards certain groups of people.
+Future work can include making sure that the data is balanced to ensure that predictions are not skewed.  Further investigation can be made on the data to ensure that there are no bias towards certain groups of people.
 
 Looking at other metrics other than accuracy could provide better insights or predictions.  For example Mean Squared Error, Root Mean Squared Error, Mean Absolute Error, etc.
+
+**Why balancing of data would improve the model?**
+When data sets are balanced, acuracy of models increase.  Unbalanced classes mean that the number of observations per class is not equally distributed.  This causes one class to overpower the other classes and the prediction will be biased towards the class with more observations.  Unbalanced datasets can be balanced by resampling, either oversampling or undersampling.  Undersampling is the process where samples are randomly removed from the class that has too many observations.  Overersampling is the process where data is randomly generated to add observations to the class that has fewer observations.
+
+**Why removing bias from data would improve the model?**
+Bias in datasets causes certain elements in datasets to have a higher weighting than other elements.  Bias causes skewed predictions and lower accuracy of models.  Removing any bias from the data will ensure a model representative of the real world and higher accuracy.  Bias can be removed by using diverse data sets and making bias testing part of the model development.
+
+**Why looking at other metrics would improve the model?**
+Accuracy is used to measure classification models and metrics like Root Mean Squared Error
+
+
 
