@@ -41,5 +41,7 @@ It is clear that AutoML delivered a model with better accuracy using a Votin Ens
 
 The bigest difference is that AutoML automates the execution of multiple models.  If I want to do the same using HyperDrive, I would need to manually set up a pipeline for each model.
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
+Future work can include making sure that the data is balanced to ensure that predictions are now skewed.  Further investigation can be made on the data to ensure that there are no bias towards certain groups of people.
+
+Looking at other metrics other than accuracy could provide better insights or predictions.  For example Mean Squared Error, Root Mean Squared Error, Mean Absolute Error, etc.
 
