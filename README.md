@@ -36,6 +36,25 @@ AutoML allowed me to run multiple experiments and chose the best model.
 
 A total of 30 models were executed.  The best model happened to be the VotingEnsemble and had a slightly better accuracy of 91.77%.  This is a majority voting ensemble which combines the predictions from multiple models.  This wil give a better performing model than using a single model that was used in the ensemble.
 
+**An overview of parameters used in the AutoML configuration.**
+experiment_tmeout_minutes=30 - This is the maximum amount in minutes that the AutoML has to complete iterations before the experiment is ended.  This was set to 30 minutes due to resource constraints.
+
+task='classification' - This defines the type of model you would like to run.  In this case it will run a classification task.  Regression or forecasting can also be used.
+
+primary_metric='accuracy' - This is the metric that AutoML will optomize and will lead to the selection of the best model.
+
+training_data=final_training_data - This is where the training dataset is fed to AutoML.
+
+label_column_name='y' - This specifies the column name that the prediction must be done on.
+
+n_cross_validations=6 - This sets the number of cross validations that AutoML must perform when no validation dataset is provided.
+
+compute_target=cpu_cluster - This defines which compute target AutoML should use to run the experiment on.
+
+enable_early_stopping=True - This defines if AutoML will enforce an early stopping policy.
+
+enable_onnx_compatible_models=True - This allows for Open Neural Network Exchange compatibility.  This compatibility is useful for the inferencing stage of a model.  This allows inferencing accros multiple frameworks without optomizing hardware.
+
 ## Pipeline comparison
 It is clear that AutoML delivered a model with better accuracy using a Votin Ensemble.  The Voting Ensemble delivered an accuracy 0f 91.77% compared to using logistic regression and HyperDrive which delivered an accuracy of 90.89%.
 
@@ -52,7 +71,7 @@ When data sets are balanced, acuracy of models increase.  Unbalanced classes mea
 Bias in datasets causes certain elements in datasets to have a higher weighting than other elements.  Bias causes skewed predictions and lower accuracy of models.  Removing any bias from the data will ensure a model representative of the real world and higher accuracy.  Bias can be removed by using diverse data sets and making bias testing part of the model development.
 
 **Why looking at other metrics would improve the model?**
-Accuracy is used to measure classification models and metrics like Root Mean Squared Error
+Accuracy is traditianally used to measure classification models and metrics like Root Mean Squared Error is used to measure regression models.  By using other metrics like the Root Mean Squared Error for this model could provide a better comparison to the regression model used with Hyperdrive. 
 
 
 
