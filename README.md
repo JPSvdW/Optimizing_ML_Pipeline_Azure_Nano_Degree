@@ -74,6 +74,9 @@ Bias in datasets causes certain elements in datasets to have a higher weighting 
 Accuracy is traditianally used to measure classification models and metrics like Root Mean Squared Error is used to measure regression models.  By using other metrics like the Root Mean Squared Error for this model could provide a better comparison to the regression model used with Hyperdrive. 
 
 ## Proof of Cluster clean up
-![image](https://user-images.githubusercontent.com/77330289/143193162-2d81585c-df34-41cc-bb6e-b33d6380597a.png)
+![image](https://user-images.githubusercontent.com/77330289/143196429-e0646b16-f054-4780-a1ec-5e38fd87fa60.png)
+![image](https://user-images.githubusercontent.com/77330289/143196443-bdf664a7-4ca3-4549-a161-af9507370dd2.png)
+
+
 
 
